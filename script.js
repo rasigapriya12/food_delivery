@@ -1,8 +1,5 @@
 let cart = [];
 
-
-// ================= ADD TO CART =================
-
 function addToCart(name, price) {
 
     let item = {
@@ -17,22 +14,15 @@ function addToCart(name, price) {
     alert(name + " added to cart!");
 }
 
-
-// ================= UPDATE CART =================
-
 function updateCart() {
 
     let cartItems = document.getElementById("cartItems");
-
     let cartCount = document.getElementById("cartCount");
-
     let total = document.getElementById("total");
-
 
     cartItems.innerHTML = "";
 
     let totalPrice = 0;
-
 
     if (cart.length === 0) {
 
@@ -41,48 +31,33 @@ function updateCart() {
                 Your cart is empty.
             </p>
         `;
-
     }
-
 
     for (let i = 0; i < cart.length; i++) {
 
         totalPrice = totalPrice + cart[i].price;
 
-
         cartItems.innerHTML += `
-
             <div class="cart-item">
 
                 <div>
-
                     <h4>${cart[i].name}</h4>
-
                     <p>₹${cart[i].price}</p>
-
                 </div>
 
                 <button
                     class="remove-button"
                     onclick="removeItem(${i})">
-
                     Remove
-
                 </button>
 
             </div>
-
         `;
     }
 
-
     cartCount.textContent = cart.length;
-
     total.textContent = totalPrice;
 }
-
-
-// ================= REMOVE ITEM =================
 
 function removeItem(index) {
 
@@ -91,24 +66,15 @@ function removeItem(index) {
     updateCart();
 }
 
-
-// ================= OPEN CART =================
-
 function openCart() {
 
     document.getElementById("cartBox").classList.add("active");
 }
 
-
-// ================= CLOSE CART =================
-
 function closeCart() {
 
     document.getElementById("cartBox").classList.remove("active");
 }
-
-
-// ================= PLACE ORDER =================
 
 function placeOrder() {
 
@@ -119,9 +85,7 @@ function placeOrder() {
         return;
     }
 
-
     alert("🎉 Order placed successfully!");
-
 
     cart = [];
 
@@ -129,9 +93,6 @@ function placeOrder() {
 
     closeCart();
 }
-
-
-// ================= SCROLL TO MENU =================
 
 function scrollToMenu() {
 
