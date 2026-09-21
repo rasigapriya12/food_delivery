@@ -289,6 +289,36 @@ section {
     color: #ff5722;
 }
 
+.customer-form {
+    margin-top: 25px;
+}
+
+.customer-form h3 {
+    margin-bottom: 12px;
+}
+
+.customer-form input,
+.customer-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.customer-form textarea {
+    height: 90px;
+    resize: none;
+}
+
+.customer-form input:focus,
+.customer-form textarea:focus {
+    outline: none;
+    border-color: #ff5722;
+}
+
 .place-order {
     width: 100%;
     background: #28a745;
@@ -299,6 +329,10 @@ section {
     margin-top: 20px;
     font-size: 16px;
     cursor: pointer;
+}
+
+.place-order:hover {
+    background: #218838;
 }
 
 .empty-cart {
@@ -324,6 +358,7 @@ footer p {
 }
 
 @media (max-width: 900px) {
+
     .menu {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -339,6 +374,7 @@ footer p {
 }
 
 @media (max-width: 600px) {
+
     header {
         height: auto;
         padding: 15px;
